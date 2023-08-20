@@ -232,13 +232,13 @@ video{
 
 }
 #card1{
-    background-image: url(./img&video/home-toptracer.avif);
+    background-image: url(home-toptracer.avif);
 }
 #card2{
-    background-image: url(./img&video/hero-4.webp);
+    background-image: url(hero-4.webp);
 }
 #card3{
-    background-image: url(./img&video/home-lessons.avif);
+    background-image: url(home-lessons.avif);
 }
 .overlay{
     height: 100%;
