@@ -40,7 +40,7 @@ gsap.to(".main",{
     scrollTrigger:{
         trigger:".main",
         scroller:"body",
-        markers:true,
+        // markers:true,
         start:"top -25%",
         end:"top -70%",
         // delay:0.7,
@@ -65,14 +65,14 @@ gsap.from(".card",{
     scale:0.5,
     opacity:0,
     duration:1,
-    stagger:0.1,
+    // stagger:0.1,
     scrollTrigger:{
         trigger:".card",
         scroll:"body",
         // markers:true,
         start:"top 75%",
         end:"top 65%",
-        scrub:2
+        scrub:3
     }
 })
 
