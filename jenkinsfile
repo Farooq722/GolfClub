@@ -1,0 +1,47 @@
+pipeline {
+    agent none
+    stages {
+        stage('Checkout') {
+            steps {
+                // Check out the code from your Git repository
+                git 'https://github.com/Farooq722/GolfClub.git'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                // Build the project using Maven
+                sh 'mvn clean install'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                // Run tests using JUnit
+                sh 'mvn test'
+            }
+        }
+
+        stage('SonarQube Analysis') {
+            steps {
+                // Run SonarQube analysis
+                sh 'mvn sonar:sonar'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                // Replace this with your actual deployment commands
+                sh 'echo "Deploying the project..."'
+            }
+        }
+    }
+
+    post {
+        failure {
+            // This block will be executed if any of the stages fail
+            echo "Pipeline failed! Notify the team or take appropriate actions."
+            // You can also add additional steps for notification or cleanup here
+        }
+    }
+}
