@@ -4,16 +4,19 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                // Check out the code from the Git repository
-                git 'https://github.com/Farooq722/GolfClub.git'
+                echo ' it is a check out section'
             }
         }
 
         stage('Build') {
             steps {
                 // Replace this with your build commands
-                sh 'echo "Building the project..."'
+                echo 'echo "Building the project..."'
             }
+        }
+
+        stage('deploy'){
+                echo ' deploying stage is done'
         }
     }
 
