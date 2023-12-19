@@ -16,13 +16,9 @@ pipeline {
         }
 
         stage('deploy'){
+            steps{
                 echo ' deploying stage is done'
-        }
-    }
-
-    post {
-        failure {
-            echo "Pipeline failed! Notify the team or take appropriate actions."
+            }
         }
     }
 }
